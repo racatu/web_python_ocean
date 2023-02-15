@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 
-app = Flask("__name__")
+app = Flask(__name__)
 
 #POSTS MOCK
 posts = [
@@ -20,5 +20,5 @@ posts = [
 
 @app.route('/')
 def exibir_entradas():
-    
+
     return render_template("exibir_entradas.html", entradas=posts)
